@@ -333,48 +333,6 @@ class HabitTrackerApp:
         # Refresh the displayed habits list
         self.display_all_habits()
 
-    def filter_by_frequency(self):
-        self.filter_window = tk.Toplevel(self.root)
-        self.filter_window.title("Filter by Frequency")
-
-        # Dropdown to select frequency
-        self.frequency_var = tk.StringVar(value="daily")
-        frequency_menu = tk.OptionMenu(self.filter_window, self.frequency_var, "daily", "weekly", "monthly")
-        frequency_menu.pack()
-
-        go_button = tk.Button(self.filter_window, text="Go", command=self.show_filtered_habits)
-        go_button.pack()
-
-    def show_filtered_habits(self):
-        selected_frequency = self.frequency_var.get()
-        self.filter_window.destroy()
-        self.all_habits_window.destroy()
-
-        self.all_habits_window = tk.Toplevel(self.root)
-        self.all_habits_window.title(f"Habits with frequency: {selected_frequency}")
-
-        self.cursor.execute('SELECT id, name, periodicity, weekdays, monthly_day FROM habits WHERE periodicity = ?',
-                            (selected_frequency,))
-        filtered_habits = self.cursor.fetchall()
-
-        for habit in filtered_habits:
-            habit_id, name, periodicity, weekdays, monthly_day = habit
-            habit_frame = tk.Frame(self.all_habits_window)
-            habit_frame.pack(fill='x', padx=5, pady=5)
-
-            habit_label = tk.Label(habit_frame, text=f"{name} - {periodicity.capitalize()}")
-            habit_label.pack(side='left')
-
-            # Repeat the buttons for each habit
-            complete_button = tk.Button(habit_frame, text="Complete", command=lambda h=habit: self.complete_habit(h))
-            complete_button.pack(side='left')
-
-            update_button = tk.Button(habit_frame, text="Update", command=lambda h=habit: self.update_habit(h))
-            update_button.pack(side='left')
-
-            analytics_button = tk.Button(habit_frame, text="Analytics",
-                                         command=lambda h=habit_id: self.view_analytics(h))
-            analytics_button.pack(side='left')
 
     def view_analytics(self, habit_id):
         self.cursor.execute('SELECT name FROM habits WHERE id = ?', (habit_id,))
