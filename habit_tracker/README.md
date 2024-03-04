@@ -1,89 +1,63 @@
-# Habit Tracker
+# Daily Habit Manager
 
-Habit Tracker is a simple application built using Python and object-oriented programming (OOP) concepts. It allows users to track their habits and monitor their progress over time. The application provides a graphical user interface (GUI) created with Tkinter.
+Daily Habit Manager is a versatile tool engineered to assist individuals in monitoring and sustaining their daily routines. Developed with Python, this application leverages the principles of object-oriented programming (OOP) to offer a structured and efficient habit management system. It features a graphical user interface (GUI) powered by Tkinter, providing an intuitive and user-friendly experience.
+Core Dependencies
 
-## Dependencies
+# This application is built upon several key dependencies:
 
-The Habit Tracker application relies on the following dependencies:
+Python 3.8.8 or later
+The sqlite3 library for database management
+Tkinter, which is part of the Python standard library for GUI creation
 
-- Python 3.8.8 or a compatible version
-- sqlite3 module
-- Tkinter (included in Python standard library)
+# Getting Started
 
-## Installation and Setup
+To begin using the Daily Habit Manager, please follow these setup instructions:
 
-To set up and run the Habit Tracker application, follow these steps:
+Confirm the installation of Python 3.8.8 or a later version on your machine.
+Download the required files: habitracker.py
+Use a terminal or command prompt to navigate to the folder containing the downloaded files.
 
-1. Ensure that you have Python 3.8.8 or a compatible version installed on your system.
-2. Download all the necessary files: `database.py`, `habit.py`, `main.py`, and `gui.py` (download `habit_tracker.db` for 4 weeks of predefined habit data).
-3. Open a terminal or command prompt and navigate to the directory where you downloaded the files.
+# Launching the Application
 
-## Running the Program
+Execute the application by typing the command below in your terminal or command line:
 
-To run the application, use the following command in your terminal or command prompt:
+bash
 
+python habittracker.py
 
-    python main.py
+Upon execution, the application's main GUI window will appear, presenting options to either view current habits or add new ones.
+# Testing
 
+For testing purposes, ensure pytest is installed. If not, you can install it using: pip install pytest
+To execute the tests, run:
 
+pytest
+Or to target specific tests:
 
-The application's GUI window will open, providing options to either view existing habits or create a new habit.
+pytest test_database.py pytest test_habit.py
+Adding a New Habit
 
-## Running Tests
+# To add a new habit:
 
-To run the tests, you would need to have `pytest` installed. If it's not installed, you can install it using the following command:
+Choose "Create New Habit" from the main window.
+In the subsequent window, input the habit's name and set its frequency (daily, weekly, monthly) via the dropdown menu.
+Press "Create" to save the habit.
+For weekly or monthly habits, a further customization window will appear post-creation for detailed scheduling. 
+(For weekly habits, a dropdown menu will appear where you can select all weekdays when you want your habit to appear; 
+for a monthly habit, simply type in a number between 1 and 31 to speciy the date when your habit should be appear).
+Confirm your settings with the "Confirm" button, and a success message will be shown.
+You may close the window or re-run habittracker.py to continue.
 
+# Habit Insights and Management
 
+From the main window, selecting "View Habits" allows you to:
 
-    pip install pytest
-    
+Check off today's habits as done.
+Access a comprehensive list of all habits, including recent additions.
+Utilize the "Filter by Frequency" feature to sort habits by their recurrence rate.
+Use the "Analytics" feature for in-depth habit analysis, including streaks and completion rates.
+Modify or remove habits as needed, with immediate changes reflected upon window refresh.
+Update habit details or review analytical insights for each habit listed.
 
-
-Then, to run the tests, use the following command:
-
-
-
-    pytest
-   
-
-
-Or use the following command to run a specific test:
-
-
-
-    pytest test_database.py
-    pytest test_habit.py
-    
-
-
-## Creating a New Habit
-
-If you choose to create a new habit, follow these steps:
-
-1. Select the "Create New Habit" option in the initial window.
-2. A new window will open, allowing you to enter the name of the habit and choose its frequency from a drop-down menu (e.g., daily, weekly, monthly).
-3. Click the "Create" button to create the habit.
-4. For habits with a weekly and monthly frequency, the Habit Tracker app offers a flexible scheduling option. After clicking on the "Create" button, a new window will open, allowing you to customize the habit's recurrence.
-5. Click the "Confirm" button. You'll receive a confirmation message displayed upon creation.
-6. Close the window or run the `main.py` file again to proceed.
-
-## Viewing Habits and Analytics
-
-After returning to the welcome window and selecting the "View Habits" option, you can:
-
-- View habits that need to be completed on the current day (if any).
-- Click on the "Complete" button to complete the habit.
-- Click the "View All Habits" button to see a list of all created habits, including the one you just created.
-- Click the "Filter by Frequency" button to see a list of habits of the chosen frequency.
-- Click the "Analytics" button to see the longest streak, highest completion rate among all habits, and comparison graph.
-- For each habit listed, you can delete, update, and view analytics.
-- Click the "Update" button to modify the name of the habit and frequency, once completed simply click on the "Update" button (close the window and open it again to see the changes). Note: If the frequency is weekly specify the day with the first letter alone uppercase and for monthly enter a number between 1-31.
-- Click the "View Analytics" button to display the habit's longest streak, current streak, and completion rate.
-- Please note that if you view the analytics immediately after creating a habit, the values will be zero since there won't be any recorded data yet.
-
-## Acknowledgments
-
-The Habit Tracker application was developed as a learning exercise in object-oriented programming and GUI development using Python. It serves as a starting point for building more complex habit-tracking and management systems.
-
-
-#### Enjoy using the Habit Tracker application!
+# Credits
+I hope you find the Habit Manager both useful and insightful!
