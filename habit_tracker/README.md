@@ -48,7 +48,7 @@ shell
 pytest test_database.py
 pytest test_habit.py
 
-# Crafting a New Routine
+# Create a new habit
 
 Should you opt to create a new routine, proceed as follows:
 
@@ -74,4 +74,4 @@ Back at the welcome screen, selecting "View Habits" lets you:
 
 # Acknowledgement
 
-Habit Keeper was conceived as an introductory project to acquaint oneself with the nuances of object-oriented programming and GUI crafting in Python. It lays the groundwork for more intricate routine tracking and management solutions.
+Habit Tracker was conceived as an introductory project to acquaint oneself with the nuances of object-oriented programming and GUI crafting in Python. It lays the groundwork for more intricate routine tracking and management solutions.
