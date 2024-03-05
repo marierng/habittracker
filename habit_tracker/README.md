@@ -14,7 +14,7 @@ Tkinter, which is part of the Python standard library for GUI creation
 To begin using the Daily Habit Manager, please follow these setup instructions:
 
 Confirm the installation of Python 3.8.8 or a later version on your machine.
-Download the required files: habitracker.py
+Download the required files: database.py, gui.py, habit.py, habit_tracker.de, main.py, test_database.py, test_habit.py.
 Use a terminal or command prompt to navigate to the folder containing the downloaded files.
 
 # Launching the Application
@@ -34,7 +34,8 @@ To execute the tests, run:
 pytest
 Or to target specific tests:
 
-pytest test_database.py pytest test_habit.py
+pytest test_database.py 
+pytest test_habit.py
 # Adding a New Habit
 
 To add a new habit:
