@@ -35,9 +35,9 @@ pytest
 Or to target specific tests:
 
 pytest test_database.py pytest test_habit.py
-Adding a New Habit
+# Adding a New Habit
 
-# To add a new habit:
+To add a new habit:
 
 Choose "Create New Habit" from the main window.
 In the subsequent window, input the habit's name and set its frequency (daily, weekly, monthly) via the dropdown menu.
