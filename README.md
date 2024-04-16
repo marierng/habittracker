@@ -35,17 +35,12 @@ bash
 
 pip install pytest
 
-### To execute the tests, run:
+
+### To test the database, run:
 
 bash
 
-pytest
-
-### Or to target specific tests:
-
-bash
-
-pytest test_database.py
+pytest setup_test_db.py
 
 # Adding a New Habit
 
