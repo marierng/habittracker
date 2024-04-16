@@ -14,7 +14,7 @@ This application is built upon several key dependencies:
 To begin using the Daily Habit Manager, please follow these setup instructions:
 
     Confirm the installation of Python 3.8.8 or a later version on your machine.
-    Download the required files: database.py, habit.py, main.py, and gui.py. Optionally, you can also download habit_tracker.db to start with four weeks of pre-populated habit data.
+    Download the required files: database.py, main.py, and habit_tracker.py. Optionally, you can also download habits.db to start with four weeks of pre-populated habit data.
     Use a terminal or command prompt to navigate to the folder containing the downloaded files.
 
 # Launching the Application
@@ -23,7 +23,7 @@ Execute the application by typing the command below in your terminal or command 
 
 bash
 
-python habit_tracker.py
+python main.py
 
 Upon execution, the application's main GUI window will appear, presenting options to either view current habits or add new ones.
 
@@ -46,7 +46,6 @@ pytest
 bash
 
 pytest test_database.py
-pytest test_habit.py
 
 # Adding a New Habit
 
@@ -59,7 +58,7 @@ To add a new habit:
     (For weekly habits, a dropdown menu will appear where you can select all weekdays when you want your habit to appear; 
     for a monthly habit, simply type in a number between 1 and 31 to speciy the date when your habit should be appear).
     Confirm your settings with the "Confirm" button, and a success message will be shown.
-    You may close the window or re-run main.py to continue.
+
 
 # Habit Insights and Management
 
